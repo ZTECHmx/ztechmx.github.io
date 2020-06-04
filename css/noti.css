@@ -1,0 +1,173 @@
+* {
+	margin:0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background: #F0F2F1;
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+.contenedorN {
+	max-width: 1200px;
+	margin:50px auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.contenedorN_tarjeta {
+	margin: 20px;
+}
+
+.contenedorN_tarjeta a {
+	display: inline-block;
+}
+
+.contenedorN_tarjeta:hover figure {
+	transform: perspective(600px) rotateY(180deg);
+	-webkit-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+	box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+}
+
+.contenedor_tarjeta:hover figure img {
+	filter:blur(2px);
+}
+
+figure {
+	width: 300px;
+	height: 350px;
+	margin:0;
+	position: relative;
+	transition: all ease .5s;
+	transform-style: preserve-3d;
+	transform: perspective(600px) rotateY(0deg);
+}
+
+figure .frontal,
+figure .trasera {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	transition: all ease .5s;
+}
+
+figure .frontal {
+	display: block;
+	background: #000;
+
+	/* Podemos ocultar la imagen al da la vuelta si lo queremos */
+	backface-visibility: hidden;
+}
+
+figure .trasera {
+	position: absolute;
+	top: 0;
+	padding: 20px;
+	color: #fff;
+	transform: perspective(600px) rotateY(180deg);
+	backface-visibility: hidden;
+	overflow: auto;
+}
+
+.contenedorN_tarjeta:nth-child(1) figure .trasera{
+background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0f9b0f, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	
+}
+
+.contenedorN_tarjeta:nth-child(3) figure .trasera{
+background: #200122;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.contenedorN_tarjeta:nth-child(5) figure .trasera{
+background: #E44D26;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #F16529, #E44D26);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #F16529, #E44D26); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}
+
+figure .trasera .titulo {
+	color: #fff;
+	font-weight: normal;
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+
+figure .trasera hr {
+	height: 2px;
+	background: #fff;
+	border: none;
+	margin-bottom: 20px;
+	opacity: .5;
+}
+
+figure .trasera p {
+	line-height: 22px;
+	font-size: 14px;
+}
+
+.contenedorN_tarjeta .titulo1{
+	color: aqua;
+	font-size: 13px;
+
+}
+
+.contenedorN_tarjeta .titulo2{
+	color:greenyellow;
+	font-size: 13px;
+
+}
+
+.contenedorN_tarjeta .titulo3{
+	color:#000;
+	font-size: 13px;
+
+}
+
+.contenedorN_tarjeta .parrafo1{
+	color:#fff;
+	font-size: 12px;
+
+}
+
+
+.contenedorN_tarjeta .parrafo2{
+	color:#fff;
+	font-size: 11px;
+
+}
+
+
+.contenedorN_tarjeta .parrafo3{
+	color:black;
+	font-size: 9px;
+
+}
+
+@media screen and (max-width: 992px) { 
+	figure .trasera {
+		/*position: relative;*/
+		backface-visibility:visible;
+		transform: perspective(600px) rotateY(0deg);
+	}
+
+	.contenedor_tarjeta:hover figure {
+		transform: perspective(600px) rotateY(0deg);	
+	}
+
+}

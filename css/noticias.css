@@ -1,0 +1,66 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+}
+
+.ContenedorNoticia{
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.ContenedorNoticia .Tarjeta{
+    width: 330px;
+    height: 430px;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    margin: 20px;
+    text-align: center;
+    transition: all 0.50s;
+}
+
+
+.ContenedorNoticia .Tarjeta:hover{
+    transform: translateY(-15px);
+
+    -webkit-box-shadow: 18px 2px 7px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 18px 2px 7px 5px rgba(0,0,0,0.75);
+    box-shadow: 18px 2px 7px 5px rgba(0,0,0,0.75);
+}
+
+.ContenedorNoticia .Tarjeta img{
+    width: 330px;
+    height:220px;
+}
+
+.ContenedorNoticia .Tarjeta h5{
+    font-weight: 600;
+
+}
+
+.ContenedorNoticia .Tarjeta p{
+    padding:  0 1rem;
+    font-size:10px;
+    font-weight:300;
+}
+
+.ContenedorNoticia .Tarjeta a{
+    font-weight: 500;
+    text-decoration: none;
+    color: yellowgreen;
+}
+
+.ContenedorNoticia .parrafo{
+    font-size: 7px;
+}
